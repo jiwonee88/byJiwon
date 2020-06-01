@@ -1,0 +1,44 @@
+import React from 'react';
+import './App.css';
+
+function App() {
+  const alertMessege = "오늘도안녕?";
+  const numCount = 0;
+  const style = {
+    backgroundColor:'gray',
+    border:'1px red solid',
+    height : Math.round(Math.random()*300)+50,
+    width : Math.round(Math.random()*300)+50,
+    WebkitTransition:'all',
+    MozTransition:'all',
+    msTrasition:'all'
+  }
+  if(numCount>0){
+    return (
+      <div>
+        <h1>{alertMessege}</h1>
+        <h2>리액트안녕!</h2>
+        <span>
+          많다
+        </span>
+      </div>
+    );
+  }else{
+    return (
+      <div className="my-div">
+        {/* 리액트 주석쓰는법.. */}
+        <h1>{alertMessege}</h1>
+        <h2>리액트안녕!</h2>
+        <span>
+          {numCount===0&&'적잖아요'}
+        </span>
+        <div style={style}
+        /* self-closed 태그에서만 작동하는 주석 */
+        // 마지막엔 />
+        />
+      </div>
+    );
+  }
+}
+
+export default App;
